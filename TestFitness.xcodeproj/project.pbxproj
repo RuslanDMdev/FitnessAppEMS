@@ -22,6 +22,7 @@
 		0CAE601528F9FE4900DA113E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601428F9FE4900DA113E /* Color.swift */; };
 		0CAE601928F9FEF100DA113E /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601828F9FEF100DA113E /* BodyViewController.swift */; };
 		0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */; };
+		0CAE601D28FA056C00DA113E /* newBodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601C28FA056C00DA113E /* newBodyViewController.swift */; };
 		72DA499E8AC5AE1245B8C2B0 /* Pods_TestFitnessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C18577969FFE8C92B9CB /* Pods_TestFitnessTests.framework */; };
 		73766B30B366745D5AF0C197 /* Pods_TestFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3164F9998DE824D0A6E63C90 /* Pods_TestFitness.framework */; };
 		E9DD37A2EFD9DE6E430D1A27 /* Pods_TestFitness_TestFitnessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76FD4C8263F8B7411500E75 /* Pods_TestFitness_TestFitnessUITests.framework */; };
@@ -65,6 +66,7 @@
 		0CAE601428F9FE4900DA113E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		0CAE601828F9FEF100DA113E /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		0CAE601C28FA056C00DA113E /* newBodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newBodyViewController.swift; sourceTree = "<group>"; };
 		262EFBB8BC792ED422959F33 /* Pods-TestFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness.release.xcconfig"; path = "Target Support Files/Pods-TestFitness/Pods-TestFitness.release.xcconfig"; sourceTree = "<group>"; };
 		3164F9998DE824D0A6E63C90 /* Pods_TestFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE5553F09A5B9DFC9836D85 /* Pods-TestFitness-TestFitnessUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness-TestFitnessUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestFitness-TestFitnessUITests/Pods-TestFitness-TestFitnessUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				0CAE600328F8484B00DA113E /* Screen3ViewController.swift */,
 				0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */,
 				0CAE601828F9FEF100DA113E /* BodyViewController.swift */,
+				0CAE601C28FA056C00DA113E /* newBodyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */,
 				0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */,
 				0CAE601528F9FE4900DA113E /* Color.swift in Sources */,
+				0CAE601D28FA056C00DA113E /* newBodyViewController.swift in Sources */,
 				0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */,
 				0CA9A96028F803B6001520F6 /* SceneDelegate.swift in Sources */,
 				0CAE601328F9FDE300DA113E /* ControlView.swift in Sources */,

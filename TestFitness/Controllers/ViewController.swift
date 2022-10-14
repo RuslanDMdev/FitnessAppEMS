@@ -120,6 +120,7 @@ class ViewController: UIViewController {
             make.left.right.equalToSuperview().inset(30)
             make.height.equalTo(100)
         }
+        buttonSnijenieVesa.addTarget(self, action: #selector(openSnijenieVesa), for: .touchUpInside)
 
         buttonHandmode.setTitle("Ручной режим", for: .normal)
         buttonHandmode.setTitleColor(.black, for: .normal)
@@ -162,8 +163,14 @@ class ViewController: UIViewController {
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)
 
-//        let controller = BodyViewController(coder: fatalError() as! NSCoder)
-//        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func openSnijenieVesa() {
+        let rootVC = BodyViewController()
+        let nacVC = UINavigationController(rootViewController: rootVC)
+        nacVC.modalPresentationStyle = .fullScreen
+        present(nacVC, animated: true)
+
     }
 }
 

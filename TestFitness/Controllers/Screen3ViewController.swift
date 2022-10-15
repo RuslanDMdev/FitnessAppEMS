@@ -13,7 +13,7 @@ class Screen3ViewController: UIViewController {
     private let NameImage = UIImageView()
     private let labelTraning = UILabel()
     private let buttonBack = UIButton()
-
+    private let shoulders = viewTest()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +31,7 @@ class Screen3ViewController: UIViewController {
         view.addSubview(buttonBack)
         view.addSubview(labelTraning)
         view.addSubview(NameImage)
-
+        view.addSubview(shoulders)
         
         NameImage.image = UIImage(named: "name")
         NameImage.snp.makeConstraints { make in
@@ -56,6 +56,11 @@ class Screen3ViewController: UIViewController {
             make.top.equalTo(NameImage).inset(80)
         }
         
+        shoulders.snp.makeConstraints { make in
+            make.top.equalTo(labelTraning.snp.bottom).offset(50)
+//            make.width.equalTo(100)
+//            make.height.equalTo(100)
+        }
     
 
     }

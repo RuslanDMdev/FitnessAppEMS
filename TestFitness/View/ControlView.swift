@@ -5,8 +5,8 @@
 //  Created by Ruslan Dalgatov on 14.10.2022.
 //
 
-import Foundation
 import UIKit
+import SnapKit
 
 class ControlView: UIView {
     
@@ -31,7 +31,7 @@ class ControlView: UIView {
         let button = MinusButton()
         button.setImage(UIImage(named: "minus"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(decreaseTapped), for: .touchUpInside)
+        button.addTarget(ControlView.self, action: #selector(decreaseTapped), for: .touchUpInside)
         
         return button
     }()
@@ -40,7 +40,7 @@ class ControlView: UIView {
         let button = PlusButton()
         button.setImage(UIImage(named: "plus"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(increaseTapped), for: .touchUpInside)
+        button.addTarget(ControlView.self, action: #selector(increaseTapped), for: .touchUpInside)
         
         return button
     }()

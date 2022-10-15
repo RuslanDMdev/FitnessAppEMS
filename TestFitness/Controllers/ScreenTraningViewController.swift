@@ -124,7 +124,6 @@ class ScreenTraningViewController: UIViewController {
         
         labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас.               Как будете готовы, переходите к следующему этапу."
         labelSubText.numberOfLines = 0
-        labelSubText.backgroundColor = .green
         labelSubText.textAlignment = .justified
         labelSubText.snp.makeConstraints { make in
             make.left.right.equalTo(contentView).inset(20)
@@ -142,6 +141,33 @@ class ScreenTraningViewController: UIViewController {
             make.centerX.equalTo(contentView)
             make.height.equalTo(120)
         }
+        
+        let minusButton1 = UIButton()
+        viewTotalPulsePower.addSubview(minusButton1)
+        minusButton1.setImage(UIImage(systemName: "minus.circle"), for: .normal)
+        minusButton1.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().inset(20)
+            make.left.equalToSuperview().inset(20)
+        }
+        minusButton1.imageView?.snp.makeConstraints({ make in
+            make.width.height.equalTo(35)
+        })
+//        minusButton1.addTarget(self, action: #selector(), for: .touchUpInside)
+
+        
+        let plusButton1 = UIButton(type: .system)
+        viewTotalPulsePower.addSubview(plusButton1)
+        plusButton1.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        plusButton1.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().inset(20)
+            make.right.equalToSuperview().inset(20)
+        }
+        plusButton1.imageView?.snp.makeConstraints({ make in
+            make.width.height.equalTo(35)
+        })
+//        plusButton1.translatesAutoresizingMaskIntoConstraints = false
+//        plusButton1.addTarget(self, action: #selector(), for: .touchUpInside)
+
 
     }
     

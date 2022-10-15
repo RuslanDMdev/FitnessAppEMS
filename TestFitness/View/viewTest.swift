@@ -9,18 +9,28 @@ import UIKit
 
 class viewTest: UIView {
     
+    // MARK: - Interface
+    
+    var onDecrease: (() -> Void)?
+    var onIncrease: (() -> Void)?
+//    private let name: String
+    
+    // MARK: - Subviews
+    
+    @IBOutlet weak var labelName: UILabel!    
+    @IBOutlet weak var buttonPlus: UIButton!
+    @IBOutlet weak var labelNumber: UILabel!
+    @IBOutlet weak var buttonMinus: UIButton!
+    
     override init(frame: CGRect) {
-        
-        super.init(frame: frame)
+        super.init(frame: .zero)
         viewInit()
-        
     }
     
     required init?(coder: NSCoder) {
-        
+        fatalError("init(coder:) has not been implemented")
         super.init(coder: coder)
         viewInit()
-        
     }
     
     func viewInit(){

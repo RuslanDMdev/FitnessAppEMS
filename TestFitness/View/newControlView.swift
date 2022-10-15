@@ -38,13 +38,6 @@ class newControlView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(frame: CGRect) {
-        
-        super.init(frame: frame)
-        viewInit()
-        
-    }
-
     
     func showNumber(number: Int?) {
         numberLabel.text = "\(number ?? 0)"

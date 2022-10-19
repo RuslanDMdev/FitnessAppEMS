@@ -21,8 +21,13 @@ class ControlView: UIView {
     private let background: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentMode = .scaleAspectFill
-        view.image = UIImage(named: "buttonBack")
+//        view.contentMode = .scaleAspectFill
+//        view.image = UIImage(named: "buttonBack")
+        view.image = UIImage(named: "backImage2")
+        view.snp.makeConstraints { make in
+            make.width.equalTo(300)
+            make.height.equalTo(100)
+        }
         
         return view
     }()
@@ -107,47 +112,92 @@ class ControlView: UIView {
         insertSubview(numberContainer, aboveSubview: background)
         numberContainer.addSubview(numberLabel)
         
+//        background.addSubview(minus)
+//        background.addSubview(plus)
+//        background.addSubview(nameLabel)
+//        background.addSubview(numberContainer)
+//        addSubview(numberLabel)
+        
         [
-            widthAnchor.constraint(equalTo: heightAnchor),
+//            widthAnchor.constraint(equalTo: heightAnchor),
             
-            background.leadingAnchor.constraint(equalTo: leadingAnchor),
-            background.trailingAnchor.constraint(equalTo: trailingAnchor),
-            background.topAnchor.constraint(equalTo: topAnchor),
-            background.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            minus.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            minus.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22),
-            minus.widthAnchor.constraint(equalToConstant: 28),
-            minus.heightAnchor.constraint(equalToConstant: 8),
-            
-            plus.topAnchor.constraint(equalTo: topAnchor, constant: 14),
-            plus.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-            plus.widthAnchor.constraint(equalToConstant: 22),
-            plus.heightAnchor.constraint(equalToConstant: 22),
-            
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 50),
-            
-            numberContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
-            numberContainer.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
-            numberContainer.widthAnchor.constraint(equalToConstant: 60),
-            numberContainer.heightAnchor.constraint(equalToConstant: 44),
-            
-            numberLabel.heightAnchor.constraint(equalTo: numberContainer.heightAnchor),
-            numberLabel.centerXAnchor.constraint(equalTo: numberContainer.centerXAnchor),
-            numberLabel.centerYAnchor.constraint(equalTo: numberContainer.centerYAnchor)
+            background.leadingAnchor.constraint(equalTo: leadingAnchor)
+//            background.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            background.topAnchor.constraint(equalTo: topAnchor),
+//            background.bottomAnchor.constraint(equalTo: bottomAnchor),
+//
+//            minus.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+//            minus.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22),
+//            minus.widthAnchor.constraint(equalToConstant: 28),
+//            minus.heightAnchor.constraint(equalToConstant: 8),
+//
+//            plus.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+//            plus.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+//            plus.widthAnchor.constraint(equalToConstant: 22),
+//            plus.heightAnchor.constraint(equalToConstant: 22),
+//
+//            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+//            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+//
+//            numberContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
+//            numberContainer.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
+//            numberContainer.widthAnchor.constraint(equalToConstant: 60),
+//            numberContainer.heightAnchor.constraint(equalToConstant: 44),
+//
+//            numberLabel.heightAnchor.constraint(equalTo: numberContainer.heightAnchor),
+//            numberLabel.centerXAnchor.constraint(equalTo: numberContainer.centerXAnchor),
+//            numberLabel.centerYAnchor.constraint(equalTo: numberContainer.centerYAnchor)
             
         ].forEach { $0.isActive = true }
+        
+        background.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(0)
+            make.width.equalTo(300)
+            make.height.equalTo(100)
+        }
+        
+        nameLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(background)
+            make.left.equalToSuperview().inset(20)
+        }
+        
+        minus.snp.makeConstraints { make in
+            make.centerY.equalTo(background)
+            make.right.equalTo(numberContainer).inset(60)
+        }
+        
+        numberContainer.snp.makeConstraints { make in
+            make.centerY.equalTo(background)
+            make.right.equalTo(plus).inset(40)
+            make.width.equalTo(40)
+            make.height.equalTo(20)
+        }
+
+        numberContainer.addSubview(numberLabel)
+        numberLabel.backgroundColor = Colors.transparentBack
+        numberLabel.snp.makeConstraints { make in
+            make.width.equalTo(40)
+            make.height.equalTo(20)
+        }
+        
+        plus.snp.makeConstraints { make in
+            make.centerY.equalTo(background)
+            make.right.equalToSuperview().inset(20)
+            
+        }
+
     }
     
     // MARK: - Actions
     
     @objc private func decreaseTapped() {
-        onDecrease?()
+        print("Кнопка минус нажата")
+//        onDecrease?()
     }
     
     @objc private func increaseTapped() {
-        onIncrease?()
+        print("Кнопка плюс нажата")
+//        onIncrease?()
     }
 }
 

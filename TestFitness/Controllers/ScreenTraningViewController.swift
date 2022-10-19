@@ -18,7 +18,16 @@ class ScreenTraningViewController: UIViewController {
     private let labelSubText = UILabel()
     private let viewTotalPulsePower = UIView()
 
-
+    private let shoulders = ControlView(name: "Плечи")
+    private let belly = ControlView(name: "Живот")
+    private let chest = ControlView(name: "Грудь")
+    private let legs = ControlView(name: "Ноги")
+    private let backUpside = ControlView(name: "Верх спины")
+    private let buttocks = ControlView(name: "Ягодицы")
+    private let backDownside = ControlView(name: "Низ спины")
+    private let hands = ControlView(name: "Руки")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -98,7 +107,7 @@ class ScreenTraningViewController: UIViewController {
         
         let viewElementWidht: CGFloat = view.frame.size.width-40
         var contentSize: CGSize {
-            CGSize(width: view.frame.width-40, height: view.frame.height + 400)
+            CGSize(width: view.frame.width-40, height: view.frame.height + 700)
         }
         
         view.addSubview(scrollView)
@@ -168,7 +177,58 @@ class ScreenTraningViewController: UIViewController {
 //        plusButton1.translatesAutoresizingMaskIntoConstraints = false
 //        plusButton1.addTarget(self, action: #selector(), for: .touchUpInside)
 
-
+        stackView.addSubview(shoulders)
+        stackView.addSubview(belly)
+        stackView.addSubview(chest)
+        stackView.addSubview(legs)
+        stackView.addSubview(backUpside)
+        stackView.addSubview(buttocks)
+        stackView.addSubview(backDownside)
+        stackView.addSubview(hands)
+        
+        
+        
+        shoulders.snp.makeConstraints { make in
+            make.top.equalTo(viewTotalPulsePower.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        belly.snp.makeConstraints { make in
+            make.top.equalTo(shoulders.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+                }
+        chest.snp.makeConstraints { make in
+            make.top.equalTo(belly.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        legs.snp.makeConstraints { make in
+            make.top.equalTo(chest.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        backUpside.snp.makeConstraints { make in
+            make.top.equalTo(legs.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        buttocks.snp.makeConstraints { make in
+            make.top.equalTo(backUpside.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        backDownside.snp.makeConstraints { make in
+            make.top.equalTo(buttocks.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        hands.snp.makeConstraints { make in
+            make.top.equalTo(backDownside.snp.bottom).offset(5)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(100)
+        }
+        
     }
     
     // MARK: - Open Settings

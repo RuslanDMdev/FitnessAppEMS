@@ -17,9 +17,9 @@ class ScreenTraningViewController: UIViewController {
     private let labelMainText = UILabel()
     private let labelSubText = UILabel()
 
-    private let totalPulsePower = ControlView(name: "Общая Мощность Импульсов")
-    private let pulseDuration = ControlView(name: "Продолжительность Импульса")
-    private let pauseDuration = ControlView(name: "Продолжительность Паузы")
+    private let totalPulsePower = upControlView(name: "Общая Мощность Импульсов")
+    private let pulseDuration = upControlView(name: "Продолжительность Импульса")
+    private let pauseDuration = upControlView(name: "Продолжительность Паузы")
     private let shoulders = ControlView(name: "Плечи")
     private let belly = ControlView(name: "Живот")
     private let chest = ControlView(name: "Грудь")

@@ -13,6 +13,7 @@
 		0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3B29015F0A002423AE /* SilovayViewController.swift */; };
 		0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */; };
 		0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3F29015F6C002423AE /* HandModeViewController.swift */; };
+		0CA60A4629016998002423AE /* upControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A4529016998002423AE /* upControlView.swift */; };
 		0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A95D28F803B6001520F6 /* AppDelegate.swift */; };
 		0CA9A96028F803B6001520F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A95F28F803B6001520F6 /* SceneDelegate.swift */; };
 		0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A96128F803B6001520F6 /* ViewController.swift */; };
@@ -59,6 +60,7 @@
 		0CA60A3B29015F0A002423AE /* SilovayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilovayViewController.swift; sourceTree = "<group>"; };
 		0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnijenieVesaViewController.swift; sourceTree = "<group>"; };
 		0CA60A3F29015F6C002423AE /* HandModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandModeViewController.swift; sourceTree = "<group>"; };
+		0CA60A4529016998002423AE /* upControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upControlView.swift; sourceTree = "<group>"; };
 		0CA9A95A28F803B6001520F6 /* TestFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA9A95D28F803B6001520F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CA9A95F28F803B6001520F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0CAE601228F9FDE300DA113E /* ControlView.swift */,
+				0CA60A4529016998002423AE /* upControlView.swift */,
 				0CA60A2F28FAE3AF002423AE /* newControlView.swift */,
 				0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */,
 				0CA60A3528FB2729002423AE /* viewTest.swift */,
@@ -465,6 +468,7 @@
 				0CA60A3028FAE3AF002423AE /* newControlView.swift in Sources */,
 				0CAE600428F8484B00DA113E /* Screen3ViewController.swift in Sources */,
 				0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */,
+				0CA60A4629016998002423AE /* upControlView.swift in Sources */,
 				0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */,
 				0CA60A3628FB2729002423AE /* viewTest.swift in Sources */,
 				0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */,

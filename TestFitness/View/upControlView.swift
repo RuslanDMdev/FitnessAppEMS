@@ -53,7 +53,7 @@ class upControlView: UIView {
     private lazy var nameLabel: UILabel = {
         let view = UILabel()
         view.textAlignment = .center
-        view.font = UIFont(name: "Avenir Next Medium", size: 12)
+        view.font = UIFont(name: "Avenir Next Medium", size: 14)
         view.textColor = Colors.labelColor
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = name
@@ -124,20 +124,22 @@ class upControlView: UIView {
             make.width.equalTo(300)
             make.height.equalTo(100)
         }
-        
+        nameLabel.numberOfLines = 0
+        nameLabel.textAlignment = .center
         nameLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(background)
-            make.left.equalToSuperview().inset(20)
+            make.top.equalTo(background).inset(15)
+            make.centerX.equalTo(background).inset(20)
+            make.width.equalTo(background)
         }
         
         minus.snp.makeConstraints { make in
-            make.centerY.equalTo(background)
-            make.right.equalTo(numberContainer).inset(60)
+            make.top.equalTo(nameLabel).inset(40)
+            make.left.equalToSuperview().inset(20)
         }
         
         numberContainer.snp.makeConstraints { make in
-            make.centerY.equalTo(background)
-            make.right.equalTo(plus).inset(40)
+            make.top.equalTo(nameLabel).inset(40)
+            make.centerX.equalToSuperview()
             make.width.equalTo(40)
             make.height.equalTo(20)
         }
@@ -150,7 +152,7 @@ class upControlView: UIView {
         }
         
         plus.snp.makeConstraints { make in
-            make.centerY.equalTo(background)
+            make.top.equalTo(nameLabel).inset(40)
             make.right.equalToSuperview().inset(20)
             
         }

@@ -13,7 +13,7 @@ class Screen3ViewController: UIViewController {
     private let NameImage = UIImageView()
     private let labelTraning = UILabel()
     private let buttonBack = UIButton()
-    private let shoulders = ControlView(name: "Плечи")
+    private let shoulders = upControlView(name: "Плечи")
     override func viewDidLoad() {
         super.viewDidLoad()
 

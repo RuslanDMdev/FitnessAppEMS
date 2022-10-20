@@ -153,7 +153,7 @@ class ControlView: UIView {
         background.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(0)
             make.width.equalTo(300)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
         nameLabel.snp.makeConstraints { make in

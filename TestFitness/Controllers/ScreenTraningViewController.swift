@@ -16,6 +16,9 @@ class ScreenTraningViewController: UIViewController {
     private let buttonBack = UIButton()
     private let labelMainText = UILabel()
     private let labelSubText = UILabel()
+    private let buttonGetDefault = UIButton()
+    private let buttonStartTraning = UIButton()
+
 
     private let totalPulsePower = upControlView(name: "Общая Мощность Импульсов")
     private let pulseDuration = upControlView(name: "Продолжительность Импульса")
@@ -108,7 +111,7 @@ class ScreenTraningViewController: UIViewController {
         
         let viewElementWidht: CGFloat = view.frame.size.width-40
         var contentSize: CGSize {
-            CGSize(width: view.frame.width-40, height: view.frame.height + 700)
+            CGSize(width: view.frame.width-40, height: view.frame.height + 330)
         }
         
         view.addSubview(scrollView)
@@ -180,63 +183,83 @@ class ScreenTraningViewController: UIViewController {
         stackView.addSubview(buttocks)
         stackView.addSubview(backDownside)
         stackView.addSubview(hands)
+        stackView.addSubview(buttonGetDefault)
+        stackView.addSubview(buttonStartTraning)
         
         
-        shoulders.layer.cornerRadius = 30
+        shoulders.layer.cornerRadius = 15
         shoulders.snp.makeConstraints { make in
             make.top.equalTo(pulseDuration.snp.bottom).offset(10)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        belly.layer.cornerRadius = 30
-        belly.layer.cornerRadius = 30
+        belly.layer.cornerRadius = 15
         belly.snp.makeConstraints { make in
             make.top.equalTo(shoulders.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
                 }
         
-        chest.layer.cornerRadius = 30
+        chest.layer.cornerRadius = 15
         chest.snp.makeConstraints { make in
             make.top.equalTo(belly.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        legs.layer.cornerRadius = 30
+        legs.layer.cornerRadius = 15
         legs.snp.makeConstraints { make in
             make.top.equalTo(chest.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        backUpside.layer.cornerRadius = 30
+        backUpside.layer.cornerRadius = 15
         backUpside.snp.makeConstraints { make in
             make.top.equalTo(legs.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        buttocks.layer.cornerRadius = 30
+        buttocks.layer.cornerRadius = 15
         buttocks.snp.makeConstraints { make in
             make.top.equalTo(backUpside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        backDownside.layer.cornerRadius = 30
+        backDownside.layer.cornerRadius = 15
         backDownside.snp.makeConstraints { make in
             make.top.equalTo(buttocks.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        hands.layer.cornerRadius = 30
+        hands.layer.cornerRadius = 15
         hands.snp.makeConstraints { make in
             make.top.equalTo(backDownside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
+        }
+        
+        buttonGetDefault.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        buttonGetDefault.setTitle("Сбросить к заводским настройкам", for: .normal)
+        buttonGetDefault.setTitleColor(#colorLiteral(red: 0, green: 0.6090424132, blue: 1, alpha: 0.8491300873), for: .normal)
+        buttonGetDefault.snp.makeConstraints { make in
+            make.top.equalTo(hands.snp.bottom).offset(10)
+            make.centerX.equalTo(contentView)
+        }
+        
+        buttonStartTraning.layer.cornerRadius = 30
+        buttonStartTraning.setTitleColor(.white, for: .normal)
+        buttonStartTraning.setTitle("Начать тренировку", for: .normal)
+        buttonStartTraning.backgroundColor = UIColor(displayP3Red: 84/255, green: 118/255, blue: 171/255, alpha: 1)
+        buttonStartTraning.snp.makeConstraints { make in
+            make.top.equalTo(buttonGetDefault.snp.bottom).offset(10)
+            make.centerX.equalTo(contentView)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(60)
         }
         
     }

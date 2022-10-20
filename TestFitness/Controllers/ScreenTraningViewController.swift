@@ -16,8 +16,10 @@ class ScreenTraningViewController: UIViewController {
     private let buttonBack = UIButton()
     private let labelMainText = UILabel()
     private let labelSubText = UILabel()
-    private let viewTotalPulsePower = UIView()
 
+    private let totalPulsePower = ControlView(name: "Общая Мощность Импульсов")
+    private let pulseDuration = ControlView(name: "Продолжительность Импульса")
+    private let pauseDuration = ControlView(name: "Продолжительность Паузы")
     private let shoulders = ControlView(name: "Плечи")
     private let belly = ControlView(name: "Живот")
     private let chest = ControlView(name: "Грудь")
@@ -48,9 +50,8 @@ class ScreenTraningViewController: UIViewController {
         view.addSubview(labelTraning)
 
 
-
         
-        shapeImage.image = UIImage(named: "lowerup")
+        shapeImage.image = UIImage(named: "upIcon")
         shapeImage.snp.makeConstraints { make in
             make.left.right.equalTo(0)
             make.height.equalTo(230)
@@ -115,7 +116,9 @@ class ScreenTraningViewController: UIViewController {
         contentView.addSubview(stackView)
         stackView.addSubview(labelMainText)
         stackView.addSubview(labelSubText)
-        
+        stackView.addSubview(totalPulsePower)
+        stackView.addSubview(pulseDuration)
+        stackView.addSubview(pauseDuration)
         
         scrollView.snp.makeConstraints { make in
                 make.width.equalTo(viewElementWidht)
@@ -141,41 +144,33 @@ class ScreenTraningViewController: UIViewController {
         }
         
         
-        viewTotalPulsePower.backgroundColor = #colorLiteral(red: 0.8235294118, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
-        stackView.addSubview(viewTotalPulsePower)
-        viewTotalPulsePower.layer.cornerRadius = 10
-        viewTotalPulsePower.snp.makeConstraints { make in
+        let sizeForTwoViews = contentView.frame.size.width/2-25
+        
+        totalPulsePower.backgroundColor = #colorLiteral(red: 0.6457901581, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
+        totalPulsePower.layer.cornerRadius = 15
+        totalPulsePower.snp.makeConstraints { make in
             make.top.equalTo(labelSubText.snp.bottom).offset(20)
             make.left.right.equalTo(contentView).inset(20)
-            make.centerX.equalTo(contentView)
-            make.height.equalTo(120)
+            make.height.equalTo(100)
         }
         
-        let minusButton1 = UIButton()
-        viewTotalPulsePower.addSubview(minusButton1)
-        minusButton1.setImage(UIImage(systemName: "minus.circle"), for: .normal)
-        minusButton1.snp.makeConstraints { make in
-            make.centerY.equalToSuperview().inset(20)
-            make.left.equalToSuperview().inset(20)
+        pulseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
+        pulseDuration.layer.cornerRadius = 15
+        pulseDuration.snp.makeConstraints { make in
+            make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
+            make.left.equalTo(contentView).inset(20)
+            make.width.equalTo(sizeForTwoViews)
+            make.height.equalTo(100)
         }
-        minusButton1.imageView?.snp.makeConstraints({ make in
-            make.width.height.equalTo(35)
-        })
-//        minusButton1.addTarget(self, action: #selector(), for: .touchUpInside)
-
         
-        let plusButton1 = UIButton(type: .system)
-        viewTotalPulsePower.addSubview(plusButton1)
-        plusButton1.setImage(UIImage(systemName: "plus.circle"), for: .normal)
-        plusButton1.snp.makeConstraints { make in
-            make.centerY.equalToSuperview().inset(20)
-            make.right.equalToSuperview().inset(20)
+        pauseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
+        pauseDuration.layer.cornerRadius = 15
+        pauseDuration.snp.makeConstraints { make in
+            make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
+            make.width.equalTo(sizeForTwoViews)
+            make.height.equalTo(100)
+            make.right.equalTo(contentView).inset(20)
         }
-        plusButton1.imageView?.snp.makeConstraints({ make in
-            make.width.height.equalTo(35)
-        })
-//        plusButton1.translatesAutoresizingMaskIntoConstraints = false
-//        plusButton1.addTarget(self, action: #selector(), for: .touchUpInside)
 
         stackView.addSubview(shoulders)
         stackView.addSubview(belly)
@@ -187,42 +182,57 @@ class ScreenTraningViewController: UIViewController {
         stackView.addSubview(hands)
         
         
-        
+        shoulders.layer.cornerRadius = 30
         shoulders.snp.makeConstraints { make in
-            make.top.equalTo(viewTotalPulsePower.snp.bottom).offset(5)
+            make.top.equalTo(pulseDuration.snp.bottom).offset(10)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
         }
+        
+        belly.layer.cornerRadius = 30
+        belly.layer.cornerRadius = 30
         belly.snp.makeConstraints { make in
             make.top.equalTo(shoulders.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
                 }
+        
+        chest.layer.cornerRadius = 30
         chest.snp.makeConstraints { make in
             make.top.equalTo(belly.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
         }
+        
+        legs.layer.cornerRadius = 30
         legs.snp.makeConstraints { make in
             make.top.equalTo(chest.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
         }
+        
+        backUpside.layer.cornerRadius = 30
         backUpside.snp.makeConstraints { make in
             make.top.equalTo(legs.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
         }
+        
+        buttocks.layer.cornerRadius = 30
         buttocks.snp.makeConstraints { make in
             make.top.equalTo(backUpside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
         }
+        
+        backDownside.layer.cornerRadius = 30
         backDownside.snp.makeConstraints { make in
             make.top.equalTo(buttocks.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(100)
         }
+        
+        hands.layer.cornerRadius = 30
         hands.snp.makeConstraints { make in
             make.top.equalTo(backDownside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
@@ -237,7 +247,6 @@ class ScreenTraningViewController: UIViewController {
         let rootVC = ViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
-        present(nacVC, animated: false)
+        present(nacVC, animated: true)
     }
 }
-

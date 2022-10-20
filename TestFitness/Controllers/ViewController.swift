@@ -10,6 +10,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    private let shapeImage = UIImageView()
     private let NameImage = UIImageView()
     private let labelTraning = UILabel()
     private let buttonKardio = UIButton()
@@ -30,13 +31,9 @@ class ViewController: UIViewController {
     private func setupSubviews() {
         
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"zagogulina 2")!)
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "zagogulina 2")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
         
+        view.backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.9568627451, blue: 0.9568627451, alpha: 1)
+        view.addSubview(shapeImage)
         view.addSubview(buttonBack)
         view.addSubview(labelTraning)
         view.addSubview(NameImage)
@@ -44,6 +41,12 @@ class ViewController: UIViewController {
         view.addSubview(buttonSilovay)
         view.addSubview(buttonSnijenieVesa)
         view.addSubview(buttonHandmode)
+        
+        shapeImage.image = UIImage(named: "upIcon")
+        shapeImage.snp.makeConstraints { make in
+            make.left.right.equalTo(0)
+            make.height.equalTo(230)
+        }
         
         NameImage.image = UIImage(named: "name")
         NameImage.snp.makeConstraints { make in

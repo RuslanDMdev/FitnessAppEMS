@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0CA60A3028FAE3AF002423AE /* newControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A2F28FAE3AF002423AE /* newControlView.swift */; };
-		0CA60A3228FB2175002423AE /* viewTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA60A3128FB2175002423AE /* viewTest.xib */; };
 		0CA60A3628FB2729002423AE /* viewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3528FB2729002423AE /* viewTest.swift */; };
+		0CA60A3A29002B26002423AE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3929002B26002423AE /* AuthViewController.swift */; };
+		0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3B29015F0A002423AE /* SilovayViewController.swift */; };
+		0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */; };
+		0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3F29015F6C002423AE /* HandModeViewController.swift */; };
 		0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A95D28F803B6001520F6 /* AppDelegate.swift */; };
 		0CA9A96028F803B6001520F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A95F28F803B6001520F6 /* SceneDelegate.swift */; };
 		0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A96128F803B6001520F6 /* ViewController.swift */; };
@@ -51,8 +54,11 @@
 /* Begin PBXFileReference section */
 		00535239F589A54FD40C339C /* Pods-TestFitness-TestFitnessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness-TestFitnessUITests.release.xcconfig"; path = "Target Support Files/Pods-TestFitness-TestFitnessUITests/Pods-TestFitness-TestFitnessUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0CA60A2F28FAE3AF002423AE /* newControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newControlView.swift; sourceTree = "<group>"; };
-		0CA60A3128FB2175002423AE /* viewTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = viewTest.xib; sourceTree = "<group>"; };
 		0CA60A3528FB2729002423AE /* viewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewTest.swift; sourceTree = "<group>"; };
+		0CA60A3929002B26002423AE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		0CA60A3B29015F0A002423AE /* SilovayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilovayViewController.swift; sourceTree = "<group>"; };
+		0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnijenieVesaViewController.swift; sourceTree = "<group>"; };
+		0CA60A3F29015F6C002423AE /* HandModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandModeViewController.swift; sourceTree = "<group>"; };
 		0CA9A95A28F803B6001520F6 /* TestFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA9A95D28F803B6001520F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CA9A95F28F803B6001520F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				0CAE601228F9FDE300DA113E /* ControlView.swift */,
-				0CA60A3128FB2175002423AE /* viewTest.xib */,
 				0CA60A2F28FAE3AF002423AE /* newControlView.swift */,
 				0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */,
 				0CA60A3528FB2729002423AE /* viewTest.swift */,
@@ -181,11 +186,15 @@
 		0CAE601728F9FE7A00DA113E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0CAE600328F8484B00DA113E /* Screen3ViewController.swift */,
-				0CA9A96128F803B6001520F6 /* ViewController.swift */,
-				0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */,
+				0CA60A3929002B26002423AE /* AuthViewController.swift */,
 				0CAE601828F9FEF100DA113E /* BodyViewController.swift */,
 				0CAE601C28FA056C00DA113E /* newBodyViewController.swift */,
+				0CAE600328F8484B00DA113E /* Screen3ViewController.swift */,
+				0CA9A96128F803B6001520F6 /* ViewController.swift */,
+				0CA60A3F29015F6C002423AE /* HandModeViewController.swift */,
+				0CA60A3B29015F0A002423AE /* SilovayViewController.swift */,
+				0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */,
+				0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA60A3228FB2175002423AE /* viewTest.xib in Resources */,
 				0CA9A96A28F803B8001520F6 /* LaunchScreen.storyboard in Resources */,
 				0CA9A96728F803B8001520F6 /* Assets.xcassets in Resources */,
 				0CA9A96528F803B6001520F6 /* Main.storyboard in Resources */,
@@ -459,8 +467,12 @@
 				0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */,
 				0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */,
 				0CA60A3628FB2729002423AE /* viewTest.swift in Sources */,
+				0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */,
+				0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */,
 				0CAE601528F9FE4900DA113E /* Color.swift in Sources */,
 				0CAE601D28FA056C00DA113E /* newBodyViewController.swift in Sources */,
+				0CA60A3A29002B26002423AE /* AuthViewController.swift in Sources */,
+				0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */,
 				0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */,
 				0CA9A96028F803B6001520F6 /* SceneDelegate.swift in Sources */,
 				0CAE601328F9FDE300DA113E /* ControlView.swift in Sources */,

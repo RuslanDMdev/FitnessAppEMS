@@ -191,10 +191,10 @@
 				0CAE601C28FA056C00DA113E /* newBodyViewController.swift */,
 				0CAE600328F8484B00DA113E /* Screen3ViewController.swift */,
 				0CA9A96128F803B6001520F6 /* ViewController.swift */,
-				0CA60A3F29015F6C002423AE /* HandModeViewController.swift */,
 				0CA60A3B29015F0A002423AE /* SilovayViewController.swift */,
 				0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */,
 				0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */,
+				0CA60A3F29015F6C002423AE /* HandModeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

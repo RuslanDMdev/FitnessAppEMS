@@ -141,16 +141,26 @@ class ViewController: UIViewController {
             make.left.right.equalToSuperview().inset(30)
             make.height.equalTo(100)
         }
+        buttonHandmode.addTarget(self, action: #selector(openHandMode), for: .touchUpInside)
 
     }
     
-    // MARK: - Open Settings
+    // MARK: - Open Screens
+    
     
     @objc func openScreen3() {
         let rootVC = Screen3ViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)
+    }
+    
+    @objc func openSilovaay() {
+        let rootVC = SilovayViewController()
+        let nacVC = UINavigationController(rootViewController: rootVC)
+        nacVC.modalPresentationStyle = .fullScreen
+        present(nacVC, animated: true)
+
     }
     
     @objc func openKardio() {
@@ -160,20 +170,22 @@ class ViewController: UIViewController {
         present(nacVC, animated: true)
     }
     
-    @objc func openSilovaay() {
-        let rootVC = BodyViewController()
+    
+    @objc func openSnijenieVesa() {
+        let rootVC = SnijenieVesaViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)
 
     }
     
-    @objc func openSnijenieVesa() {
-        let rootVC = BodyViewController()
+    @objc func openHandMode() {
+        let rootVC = HandModeViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)
 
     }
+
 }
 

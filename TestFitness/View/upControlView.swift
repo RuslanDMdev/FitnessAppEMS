@@ -23,7 +23,7 @@ class upControlView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
 //        view.contentMode = .scaleAspectFill
 //        view.image = UIImage(named: "buttonBack")
-        view.image = UIImage(named: "backImage2")
+//        view.image = UIImage(named: "backImage2")
         view.snp.makeConstraints { make in
             make.width.equalTo(300)
             make.height.equalTo(100)

@@ -108,7 +108,7 @@ class SnijenieVesaViewController: UIViewController {
         
         let viewElementWidht: CGFloat = view.frame.size.width-40
         var contentSize: CGSize {
-            CGSize(width: view.frame.width-40, height: view.frame.height + 500)
+            CGSize(width: view.frame.width-40, height: view.frame.height + 330)
         }
         
         view.addSubview(scrollView)
@@ -134,7 +134,7 @@ class SnijenieVesaViewController: UIViewController {
             make.centerX.equalTo(contentView)
         }
         
-        labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас.               Как будете готовы, переходите к следующему этапу."
+        labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас. Как будете готовы, переходите к следующему этапу."
         labelSubText.numberOfLines = 0
         labelSubText.textAlignment = .justified
         labelSubText.snp.makeConstraints { make in
@@ -182,61 +182,60 @@ class SnijenieVesaViewController: UIViewController {
         stackView.addSubview(hands)
         
         
-        shoulders.layer.cornerRadius = 30
+        shoulders.layer.cornerRadius = 15
         shoulders.snp.makeConstraints { make in
             make.top.equalTo(pulseDuration.snp.bottom).offset(10)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        belly.layer.cornerRadius = 30
-        belly.layer.cornerRadius = 30
+        belly.layer.cornerRadius = 15
         belly.snp.makeConstraints { make in
             make.top.equalTo(shoulders.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
                 }
         
-        chest.layer.cornerRadius = 30
+        chest.layer.cornerRadius = 15
         chest.snp.makeConstraints { make in
             make.top.equalTo(belly.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        legs.layer.cornerRadius = 30
+        legs.layer.cornerRadius = 15
         legs.snp.makeConstraints { make in
             make.top.equalTo(chest.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        backUpside.layer.cornerRadius = 30
+        backUpside.layer.cornerRadius = 15
         backUpside.snp.makeConstraints { make in
             make.top.equalTo(legs.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        buttocks.layer.cornerRadius = 30
+        buttocks.layer.cornerRadius = 15
         buttocks.snp.makeConstraints { make in
             make.top.equalTo(backUpside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        backDownside.layer.cornerRadius = 30
+        backDownside.layer.cornerRadius = 15
         backDownside.snp.makeConstraints { make in
             make.top.equalTo(buttocks.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        hands.layer.cornerRadius = 30
+        hands.layer.cornerRadius = 15
         hands.snp.makeConstraints { make in
             make.top.equalTo(backDownside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
     }

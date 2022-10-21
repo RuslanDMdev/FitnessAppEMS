@@ -18,9 +18,9 @@ class SilovayViewController: UIViewController {
     private let labelMainText = UILabel()
     private let labelSubText = UILabel()
 
-    private let totalPulsePower = ControlView(name: "Общая Мощность Импульсов")
-    private let pulseDuration = ControlView(name: "Продолжительность Импульса")
-    private let pauseDuration = ControlView(name: "Продолжительность Паузы")
+    private let totalPulsePower = upControlView(name: "Общая Мощность Импульсов")
+    private let pulseDuration = upControlView(name: "Продолжительность Импульса")
+    private let pauseDuration = upControlView(name: "Продолжительность Паузы")
     private let shoulders = ControlView(name: "Плечи")
     private let belly = ControlView(name: "Живот")
     private let chest = ControlView(name: "Грудь")
@@ -109,7 +109,7 @@ class SilovayViewController: UIViewController {
         
         let viewElementWidht: CGFloat = view.frame.size.width-40
         var contentSize: CGSize {
-            CGSize(width: view.frame.width-40, height: view.frame.height + 700)
+            CGSize(width: view.frame.width-40, height: view.frame.height + 330)
         }
         
         view.addSubview(scrollView)
@@ -135,7 +135,7 @@ class SilovayViewController: UIViewController {
             make.centerX.equalTo(contentView)
         }
         
-        labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас.               Как будете готовы, переходите к следующему этапу."
+        labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас. Как будете готовы, переходите к следующему этапу."
         labelSubText.numberOfLines = 0
         labelSubText.textAlignment = .justified
         labelSubText.snp.makeConstraints { make in
@@ -147,7 +147,7 @@ class SilovayViewController: UIViewController {
         
         let sizeForTwoViews = contentView.frame.size.width/2-25
         
-        totalPulsePower.backgroundColor = #colorLiteral(red: 0.6457901581, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
+        totalPulsePower.backgroundColor = #colorLiteral(red: 0.8235294118, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
         totalPulsePower.layer.cornerRadius = 15
         totalPulsePower.snp.makeConstraints { make in
             make.top.equalTo(labelSubText.snp.bottom).offset(20)
@@ -155,7 +155,7 @@ class SilovayViewController: UIViewController {
             make.height.equalTo(100)
         }
         
-        pulseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
+        pulseDuration.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
         pulseDuration.layer.cornerRadius = 15
         pulseDuration.snp.makeConstraints { make in
             make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
@@ -164,7 +164,7 @@ class SilovayViewController: UIViewController {
             make.height.equalTo(100)
         }
         
-        pauseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
+        pauseDuration.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
         pauseDuration.layer.cornerRadius = 15
         pauseDuration.snp.makeConstraints { make in
             make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
@@ -183,61 +183,60 @@ class SilovayViewController: UIViewController {
         stackView.addSubview(hands)
         
         
-        shoulders.layer.cornerRadius = 30
+        shoulders.layer.cornerRadius = 15
         shoulders.snp.makeConstraints { make in
             make.top.equalTo(pulseDuration.snp.bottom).offset(10)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        belly.layer.cornerRadius = 30
-        belly.layer.cornerRadius = 30
+        belly.layer.cornerRadius = 15
         belly.snp.makeConstraints { make in
             make.top.equalTo(shoulders.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
                 }
         
-        chest.layer.cornerRadius = 30
+        chest.layer.cornerRadius = 15
         chest.snp.makeConstraints { make in
             make.top.equalTo(belly.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        legs.layer.cornerRadius = 30
+        legs.layer.cornerRadius = 15
         legs.snp.makeConstraints { make in
             make.top.equalTo(chest.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        backUpside.layer.cornerRadius = 30
+        backUpside.layer.cornerRadius = 15
         backUpside.snp.makeConstraints { make in
             make.top.equalTo(legs.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        buttocks.layer.cornerRadius = 30
+        buttocks.layer.cornerRadius = 15
         buttocks.snp.makeConstraints { make in
             make.top.equalTo(backUpside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        backDownside.layer.cornerRadius = 30
+        backDownside.layer.cornerRadius = 15
         backDownside.snp.makeConstraints { make in
             make.top.equalTo(buttocks.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
-        hands.layer.cornerRadius = 30
+        hands.layer.cornerRadius = 15
         hands.snp.makeConstraints { make in
             make.top.equalTo(backDownside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
         }
         
     }

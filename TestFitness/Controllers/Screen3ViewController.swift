@@ -71,7 +71,7 @@ class Screen3ViewController: UIViewController {
         let rootVC = ViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
-        present(nacVC, animated: false)
+        present(nacVC, animated: true)
     }
 }
 

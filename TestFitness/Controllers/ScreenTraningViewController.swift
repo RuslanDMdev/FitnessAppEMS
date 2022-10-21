@@ -137,7 +137,7 @@ class ScreenTraningViewController: UIViewController {
             make.centerX.equalTo(contentView)
         }
         
-        labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас.               Как будете готовы, переходите к следующему этапу."
+        labelSubText.text = "Сейчас Вы чувствуете импульсы с Вашей последней тренировки этого типа,но на 15% ниже. Выставьте импульсы на все мышечные группы и чтобы они хорошо ощущались, но не были болезненными для вас. Как будете готовы, переходите к следующему этапу."
         labelSubText.numberOfLines = 0
         labelSubText.textAlignment = .justified
         labelSubText.snp.makeConstraints { make in

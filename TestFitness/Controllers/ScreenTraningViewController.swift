@@ -149,7 +149,7 @@ class ScreenTraningViewController: UIViewController {
         
         let sizeForTwoViews = contentView.frame.size.width/2-25
         
-        totalPulsePower.backgroundColor = #colorLiteral(red: 0.6457901581, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
+        totalPulsePower.backgroundColor = #colorLiteral(red: 0.8235294118, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
         totalPulsePower.layer.cornerRadius = 15
         totalPulsePower.snp.makeConstraints { make in
             make.top.equalTo(labelSubText.snp.bottom).offset(20)
@@ -157,7 +157,7 @@ class ScreenTraningViewController: UIViewController {
             make.height.equalTo(100)
         }
         
-        pulseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
+        pulseDuration.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
         pulseDuration.layer.cornerRadius = 15
         pulseDuration.snp.makeConstraints { make in
             make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
@@ -166,7 +166,7 @@ class ScreenTraningViewController: UIViewController {
             make.height.equalTo(100)
         }
         
-        pauseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
+        pauseDuration.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
         pauseDuration.layer.cornerRadius = 15
         pauseDuration.snp.makeConstraints { make in
             make.top.equalTo(totalPulsePower.snp.bottom).offset(10)

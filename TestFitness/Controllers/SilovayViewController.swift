@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 
 class SilovayViewController: UIViewController {
-
     
     private let shapeImage = UIImageView()
     private let labelTraning = UILabel()
@@ -17,6 +16,8 @@ class SilovayViewController: UIViewController {
     private let buttonBack = UIButton()
     private let labelMainText = UILabel()
     private let labelSubText = UILabel()
+    private let buttonGetDefault = UIButton()
+    private let buttonStartTraning = UIButton()
 
     private let totalPulsePower = upControlView(name: "Общая Мощность Импульсов")
     private let pulseDuration = upControlView(name: "Продолжительность Импульса")
@@ -147,7 +148,7 @@ class SilovayViewController: UIViewController {
         
         let sizeForTwoViews = contentView.frame.size.width/2-25
         
-        totalPulsePower.backgroundColor = #colorLiteral(red: 0.8235294118, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
+        totalPulsePower.backgroundColor = #colorLiteral(red: 0.6457901581, green: 0.9529411765, blue: 0.9333333333, alpha: 1)
         totalPulsePower.layer.cornerRadius = 15
         totalPulsePower.snp.makeConstraints { make in
             make.top.equalTo(labelSubText.snp.bottom).offset(20)
@@ -155,7 +156,7 @@ class SilovayViewController: UIViewController {
             make.height.equalTo(100)
         }
         
-        pulseDuration.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
+        pulseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
         pulseDuration.layer.cornerRadius = 15
         pulseDuration.snp.makeConstraints { make in
             make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
@@ -164,7 +165,7 @@ class SilovayViewController: UIViewController {
             make.height.equalTo(100)
         }
         
-        pauseDuration.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.9529411765, blue: 0.8392156863, alpha: 1)
+        pauseDuration.backgroundColor = #colorLiteral(red: 0.7062368442, green: 0.9251035604, blue: 0.6856263216, alpha: 1)
         pauseDuration.layer.cornerRadius = 15
         pauseDuration.snp.makeConstraints { make in
             make.top.equalTo(totalPulsePower.snp.bottom).offset(10)
@@ -181,6 +182,8 @@ class SilovayViewController: UIViewController {
         stackView.addSubview(buttocks)
         stackView.addSubview(backDownside)
         stackView.addSubview(hands)
+        stackView.addSubview(buttonGetDefault)
+        stackView.addSubview(buttonStartTraning)
         
         
         shoulders.layer.cornerRadius = 15
@@ -237,6 +240,25 @@ class SilovayViewController: UIViewController {
             make.top.equalTo(backDownside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(70)
+        }
+        
+        buttonGetDefault.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        buttonGetDefault.setTitle("Сбросить к заводским настройкам", for: .normal)
+        buttonGetDefault.setTitleColor(#colorLiteral(red: 0, green: 0.6090424132, blue: 1, alpha: 0.8491300873), for: .normal)
+        buttonGetDefault.snp.makeConstraints { make in
+            make.top.equalTo(hands.snp.bottom).offset(10)
+            make.centerX.equalTo(contentView)
+        }
+        
+        buttonStartTraning.layer.cornerRadius = 30
+        buttonStartTraning.setTitleColor(.white, for: .normal)
+        buttonStartTraning.setTitle("Начать тренировку", for: .normal)
+        buttonStartTraning.backgroundColor = UIColor(displayP3Red: 84/255, green: 118/255, blue: 171/255, alpha: 1)
+        buttonStartTraning.snp.makeConstraints { make in
+            make.top.equalTo(buttonGetDefault.snp.bottom).offset(10)
+            make.centerX.equalTo(contentView)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(60)
         }
         
     }

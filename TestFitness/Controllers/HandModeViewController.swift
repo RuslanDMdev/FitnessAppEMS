@@ -16,10 +16,12 @@ class HandModeViewController: UIViewController {
     private let buttonBack = UIButton()
     private let labelMainText = UILabel()
     private let labelSubText = UILabel()
+    private let buttonGetDefault = UIButton()
+    private let buttonStartTraning = UIButton()
 
-    private let totalPulsePower = ControlView(name: "Общая Мощность Импульсов")
-    private let pulseDuration = ControlView(name: "Продолжительность Импульса")
-    private let pauseDuration = ControlView(name: "Продолжительность Паузы")
+    private let totalPulsePower = upControlView(name: "Общая Мощность Импульсов")
+    private let pulseDuration = upControlView(name: "Продолжительность Импульса")
+    private let pauseDuration = upControlView(name: "Продолжительность Паузы")
     private let shoulders = ControlView(name: "Плечи")
     private let belly = ControlView(name: "Живот")
     private let chest = ControlView(name: "Грудь")
@@ -180,6 +182,8 @@ class HandModeViewController: UIViewController {
         stackView.addSubview(buttocks)
         stackView.addSubview(backDownside)
         stackView.addSubview(hands)
+        stackView.addSubview(buttonGetDefault)
+        stackView.addSubview(buttonStartTraning)
         
         
         shoulders.layer.cornerRadius = 15
@@ -236,6 +240,25 @@ class HandModeViewController: UIViewController {
             make.top.equalTo(backDownside.snp.bottom).offset(5)
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(70)
+        }
+        
+        buttonGetDefault.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        buttonGetDefault.setTitle("Сбросить к заводским настройкам", for: .normal)
+        buttonGetDefault.setTitleColor(#colorLiteral(red: 0, green: 0.6090424132, blue: 1, alpha: 0.8491300873), for: .normal)
+        buttonGetDefault.snp.makeConstraints { make in
+            make.top.equalTo(hands.snp.bottom).offset(10)
+            make.centerX.equalTo(contentView)
+        }
+        
+        buttonStartTraning.layer.cornerRadius = 30
+        buttonStartTraning.setTitleColor(.white, for: .normal)
+        buttonStartTraning.setTitle("Начать тренировку", for: .normal)
+        buttonStartTraning.backgroundColor = UIColor(displayP3Red: 84/255, green: 118/255, blue: 171/255, alpha: 1)
+        buttonStartTraning.snp.makeConstraints { make in
+            make.top.equalTo(buttonGetDefault.snp.bottom).offset(10)
+            make.centerX.equalTo(contentView)
+            make.left.right.equalTo(contentView).inset(20)
+            make.height.equalTo(60)
         }
         
     }

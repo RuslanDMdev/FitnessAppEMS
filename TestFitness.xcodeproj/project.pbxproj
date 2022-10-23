@@ -14,6 +14,7 @@
 		0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */; };
 		0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3F29015F6C002423AE /* HandModeViewController.swift */; };
 		0CA60A4629016998002423AE /* upControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A4529016998002423AE /* upControlView.swift */; };
+		0CA60A492905C295002423AE /* TimerTrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A482905C295002423AE /* TimerTrenViewController.swift */; };
 		0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A95D28F803B6001520F6 /* AppDelegate.swift */; };
 		0CA9A96028F803B6001520F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A95F28F803B6001520F6 /* SceneDelegate.swift */; };
 		0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A96128F803B6001520F6 /* ViewController.swift */; };
@@ -27,9 +28,7 @@
 		0CAE600728F8A8B600DA113E /* ScreenTraningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */; };
 		0CAE601328F9FDE300DA113E /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601228F9FDE300DA113E /* ControlView.swift */; };
 		0CAE601528F9FE4900DA113E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601428F9FE4900DA113E /* Color.swift */; };
-		0CAE601928F9FEF100DA113E /* BodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601828F9FEF100DA113E /* BodyViewController.swift */; };
 		0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */; };
-		0CAE601D28FA056C00DA113E /* newBodyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601C28FA056C00DA113E /* newBodyViewController.swift */; };
 		72DA499E8AC5AE1245B8C2B0 /* Pods_TestFitnessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01C18577969FFE8C92B9CB /* Pods_TestFitnessTests.framework */; };
 		73766B30B366745D5AF0C197 /* Pods_TestFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3164F9998DE824D0A6E63C90 /* Pods_TestFitness.framework */; };
 		E9DD37A2EFD9DE6E430D1A27 /* Pods_TestFitness_TestFitnessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76FD4C8263F8B7411500E75 /* Pods_TestFitness_TestFitnessUITests.framework */; };
@@ -61,6 +60,7 @@
 		0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnijenieVesaViewController.swift; sourceTree = "<group>"; };
 		0CA60A3F29015F6C002423AE /* HandModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandModeViewController.swift; sourceTree = "<group>"; };
 		0CA60A4529016998002423AE /* upControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upControlView.swift; sourceTree = "<group>"; };
+		0CA60A482905C295002423AE /* TimerTrenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTrenViewController.swift; sourceTree = "<group>"; };
 		0CA9A95A28F803B6001520F6 /* TestFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA9A95D28F803B6001520F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CA9A95F28F803B6001520F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,9 +78,7 @@
 		0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTraningViewController.swift; sourceTree = "<group>"; };
 		0CAE601228F9FDE300DA113E /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		0CAE601428F9FE4900DA113E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		0CAE601828F9FEF100DA113E /* BodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyViewController.swift; sourceTree = "<group>"; };
 		0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		0CAE601C28FA056C00DA113E /* newBodyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newBodyViewController.swift; sourceTree = "<group>"; };
 		262EFBB8BC792ED422959F33 /* Pods-TestFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness.release.xcconfig"; path = "Target Support Files/Pods-TestFitness/Pods-TestFitness.release.xcconfig"; sourceTree = "<group>"; };
 		3164F9998DE824D0A6E63C90 /* Pods_TestFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE5553F09A5B9DFC9836D85 /* Pods-TestFitness-TestFitnessUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness-TestFitnessUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestFitness-TestFitnessUITests/Pods-TestFitness-TestFitnessUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,14 +188,13 @@
 			isa = PBXGroup;
 			children = (
 				0CA60A3929002B26002423AE /* AuthViewController.swift */,
-				0CAE601828F9FEF100DA113E /* BodyViewController.swift */,
-				0CAE601C28FA056C00DA113E /* newBodyViewController.swift */,
 				0CAE600328F8484B00DA113E /* Screen3ViewController.swift */,
 				0CA9A96128F803B6001520F6 /* ViewController.swift */,
 				0CA60A3B29015F0A002423AE /* SilovayViewController.swift */,
 				0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */,
 				0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */,
 				0CA60A3F29015F6C002423AE /* HandModeViewController.swift */,
+				0CA60A482905C295002423AE /* TimerTrenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -464,7 +461,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CAE601928F9FEF100DA113E /* BodyViewController.swift in Sources */,
 				0CA60A3028FAE3AF002423AE /* newControlView.swift in Sources */,
 				0CAE600428F8484B00DA113E /* Screen3ViewController.swift in Sources */,
 				0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */,
@@ -473,8 +469,8 @@
 				0CA60A3628FB2729002423AE /* viewTest.swift in Sources */,
 				0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */,
 				0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */,
+				0CA60A492905C295002423AE /* TimerTrenViewController.swift in Sources */,
 				0CAE601528F9FE4900DA113E /* Color.swift in Sources */,
-				0CAE601D28FA056C00DA113E /* newBodyViewController.swift in Sources */,
 				0CA60A3A29002B26002423AE /* AuthViewController.swift in Sources */,
 				0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */,
 				0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */,

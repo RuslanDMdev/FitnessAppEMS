@@ -100,13 +100,7 @@ class HandModeViewController: UIViewController {
             return contentView
         }()
         
-        let stackView: UIStackView = {
-            let stackView = UIStackView()
-            stackView.axis = .vertical
-            stackView.alignment = .center
-            stackView.spacing = 20
-            return stackView
-        }()
+
         
         let viewElementWidht: CGFloat = view.frame.size.width-40
         var contentSize: CGSize {
@@ -115,12 +109,11 @@ class HandModeViewController: UIViewController {
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        contentView.addSubview(stackView)
-        stackView.addSubview(labelMainText)
-        stackView.addSubview(labelSubText)
-        stackView.addSubview(totalPulsePower)
-        stackView.addSubview(pulseDuration)
-        stackView.addSubview(pauseDuration)
+        contentView.addSubview(labelMainText)
+        contentView.addSubview(labelSubText)
+        contentView.addSubview(totalPulsePower)
+        contentView.addSubview(pulseDuration)
+        contentView.addSubview(pauseDuration)
         
         scrollView.snp.makeConstraints { make in
                 make.width.equalTo(viewElementWidht)
@@ -174,16 +167,16 @@ class HandModeViewController: UIViewController {
             make.right.equalTo(contentView).inset(20)
         }
 
-        stackView.addSubview(shoulders)
-        stackView.addSubview(belly)
-        stackView.addSubview(chest)
-        stackView.addSubview(legs)
-        stackView.addSubview(backUpside)
-        stackView.addSubview(buttocks)
-        stackView.addSubview(backDownside)
-        stackView.addSubview(hands)
-        stackView.addSubview(buttonGetDefault)
-        stackView.addSubview(buttonStartTraning)
+        contentView.addSubview(shoulders)
+        contentView.addSubview(belly)
+        contentView.addSubview(chest)
+        contentView.addSubview(legs)
+        contentView.addSubview(backUpside)
+        contentView.addSubview(buttocks)
+        contentView.addSubview(backDownside)
+        contentView.addSubview(hands)
+        contentView.addSubview(buttonGetDefault)
+        contentView.addSubview(buttonStartTraning)
         
         
         shoulders.layer.cornerRadius = 15
@@ -261,6 +254,8 @@ class HandModeViewController: UIViewController {
             make.height.equalTo(60)
         }
         
+        buttonStartTraning.addTarget(self, action: #selector(openController), for: .touchUpInside)
+
     }
     
     // MARK: - Open Controllers

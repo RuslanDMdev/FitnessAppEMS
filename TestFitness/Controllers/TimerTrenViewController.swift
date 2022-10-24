@@ -105,23 +105,6 @@ class TimerTrenViewController: UIViewController {
 
     }
     
-    // MARK: - Open Controllers
-    
-    //Добавить алерт "вы точно хотите закрыть тренировку?"
-    @objc func pediduschyController() {
-        let rootVC = ViewController()
-        let nacVC = UINavigationController(rootViewController: rootVC)
-        nacVC.modalPresentationStyle = .fullScreen
-        present(nacVC, animated: true)
-    }
-    
-    @objc func playAction() {
-        
-        timerAnimation()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        
-    }
-    
     // MARK: - Timer
     
     var timer = Timer()
@@ -143,6 +126,36 @@ class TimerTrenViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.animationCircular()
+    }
+    
+    // MARK: - Open Controllers
+    
+    //Добавить алерт "вы точно хотите закрыть тренировку?"
+    @objc func pediduschyController() {
+        
+        let alert = UIAlertController(title: "Внимание", message: "Вы  уверены, что хотите прервать тренировку ?", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Да", style: .destructive) { (action) in
+            let rootVC = ViewController()
+            let nacVC = UINavigationController(rootViewController: rootVC)
+            nacVC.modalPresentationStyle = .fullScreen
+            self.present(nacVC, animated: true)
+            
+            self.timer.invalidate()
+            
+        }
+        let cencelButton = UIAlertAction(title: "Отмена", style: .cancel)
+        alert.addAction(cencelButton)
+        alert.addAction(okButton)
+        
+        present(alert, animated: true)
+        
+    }
+    
+    @objc func playAction() {
+        
+        timerAnimation()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        
     }
     
     // MARK: - Timer Animation

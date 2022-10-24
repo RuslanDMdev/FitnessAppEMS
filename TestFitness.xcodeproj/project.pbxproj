@@ -24,7 +24,7 @@
 		0CA9A97528F803B8001520F6 /* TestFitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A97428F803B8001520F6 /* TestFitnessTests.swift */; };
 		0CA9A97F28F803B8001520F6 /* TestFitnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A97E28F803B8001520F6 /* TestFitnessUITests.swift */; };
 		0CA9A98128F803B8001520F6 /* TestFitnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9A98028F803B8001520F6 /* TestFitnessUITestsLaunchTests.swift */; };
-		0CAE600428F8484B00DA113E /* Screen3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE600328F8484B00DA113E /* Screen3ViewController.swift */; };
+		0CAE600428F8484B00DA113E /* infoAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE600328F8484B00DA113E /* infoAppController.swift */; };
 		0CAE600728F8A8B600DA113E /* ScreenTraningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */; };
 		0CAE601328F9FDE300DA113E /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601228F9FDE300DA113E /* ControlView.swift */; };
 		0CAE601528F9FE4900DA113E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE601428F9FE4900DA113E /* Color.swift */; };
@@ -74,7 +74,7 @@
 		0CA9A97A28F803B8001520F6 /* TestFitnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA9A97E28F803B8001520F6 /* TestFitnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFitnessUITests.swift; sourceTree = "<group>"; };
 		0CA9A98028F803B8001520F6 /* TestFitnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFitnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0CAE600328F8484B00DA113E /* Screen3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen3ViewController.swift; sourceTree = "<group>"; };
+		0CAE600328F8484B00DA113E /* infoAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoAppController.swift; sourceTree = "<group>"; };
 		0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTraningViewController.swift; sourceTree = "<group>"; };
 		0CAE601228F9FDE300DA113E /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		0CAE601428F9FE4900DA113E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA60A3929002B26002423AE /* AuthViewController.swift */,
-				0CAE600328F8484B00DA113E /* Screen3ViewController.swift */,
+				0CAE600328F8484B00DA113E /* infoAppController.swift */,
 				0CA9A96128F803B6001520F6 /* ViewController.swift */,
 				0CA60A3B29015F0A002423AE /* SilovayViewController.swift */,
 				0CAE600628F8A8B600DA113E /* ScreenTraningViewController.swift */,
@@ -462,7 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA60A3028FAE3AF002423AE /* newControlView.swift in Sources */,
-				0CAE600428F8484B00DA113E /* Screen3ViewController.swift in Sources */,
+				0CAE600428F8484B00DA113E /* infoAppController.swift in Sources */,
 				0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */,
 				0CA60A4629016998002423AE /* upControlView.swift in Sources */,
 				0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */,

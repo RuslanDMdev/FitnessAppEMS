@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
         // 3. Программно создаем основной контроллер и интегрируем в него NavigationController
-        let viewController = TimerTrenViewController()
+        let viewController = AuthViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         // 4. Определяем navigationController as rootViewController
         window.rootViewController = navigationController

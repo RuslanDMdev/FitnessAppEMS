@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
-        
     }
 
 
@@ -54,7 +53,7 @@ class ViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        buttonBack.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
+        buttonBack.setImage(UIImage(systemName: "info.circle"), for: .normal)
         buttonBack.imageView?.snp.makeConstraints({ make in
             make.width.height.equalTo(30)
         })
@@ -149,7 +148,7 @@ class ViewController: UIViewController {
     
     
     @objc func openScreen3() {
-        let rootVC = Screen3ViewController()
+        let rootVC = infoAppController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)

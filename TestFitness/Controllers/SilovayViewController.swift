@@ -261,13 +261,21 @@ class SilovayViewController: UIViewController {
             make.left.right.equalTo(contentView).inset(20)
             make.height.equalTo(60)
         }
+        buttonStartTraning.addTarget(self, action: #selector(openController), for: .touchUpInside)
         
     }
     
-    // MARK: - Open Settings
+    // MARK: - Open Controllers
     
     @objc func openViewController() {
         let rootVC = ViewController()
+        let nacVC = UINavigationController(rootViewController: rootVC)
+        nacVC.modalPresentationStyle = .fullScreen
+        present(nacVC, animated: true)
+    }
+    
+    @objc func openController() {
+        let rootVC = TimerTrenViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)

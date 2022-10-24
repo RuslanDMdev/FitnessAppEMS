@@ -263,10 +263,17 @@ class SnijenieVesaViewController: UIViewController {
         
     }
     
-    // MARK: - Open Settings
+    // MARK: - Open Controllers
     
     @objc func openViewController() {
         let rootVC = ViewController()
+        let nacVC = UINavigationController(rootViewController: rootVC)
+        nacVC.modalPresentationStyle = .fullScreen
+        present(nacVC, animated: true)
+    }
+    
+    @objc func openController() {
+        let rootVC = TimerTrenViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen
         present(nacVC, animated: true)

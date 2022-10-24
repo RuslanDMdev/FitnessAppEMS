@@ -139,7 +139,6 @@ class TimerTrenViewController: UIViewController {
             let nacVC = UINavigationController(rootViewController: rootVC)
             nacVC.modalPresentationStyle = .fullScreen
             self.present(nacVC, animated: true)
-            
             self.timer.invalidate()
             
         }

@@ -42,7 +42,7 @@ class infoAppController: UIViewController {
             make.width.height.equalTo(30)
         })
         buttonBack.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(50)
+            make.top.equalToSuperview().inset(70)
             make.left.equalTo(20)
         }
         buttonBack.addTarget(self, action: #selector(openViewController), for: .touchUpInside)
@@ -51,7 +51,7 @@ class infoAppController: UIViewController {
         labelTraning.font = UIFont.boldSystemFont(ofSize: 25)
         labelTraning.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(50)
+            make.top.equalTo(buttonBack)
         }
         
         iconAppImage.backgroundColor = #colorLiteral(red: 0.1607843137, green: 0.1647058824, blue: 0.1882352941, alpha: 1)

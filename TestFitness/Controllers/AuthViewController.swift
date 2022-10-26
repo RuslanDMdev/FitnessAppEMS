@@ -273,6 +273,7 @@ class AuthViewController: UIViewController {
     // MARK: - Open NextScreen
     
     @objc func openViewController() {
+//        print("\(view.frame.size.width)")
         let rootVC = ViewController()
         let nacVC = UINavigationController(rootViewController: rootVC)
         nacVC.modalPresentationStyle = .fullScreen

@@ -79,12 +79,20 @@ class ViewController: UIViewController {
         }
         
 //        containerView.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        if view.frame.size.width <= 400 {
+            containerView.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.height.equalTo(realContainerheight)
+                //            make.centerY.equalToSuperview().offset(50)
+                make.bottom.equalToSuperview().inset(20)
+                make.left.right.equalToSuperview().inset(30)
+            }
+        }
         containerView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.height.equalTo(realContainerheight)
-//            make.centerY.equalToSuperview().offset(50)
-            make.bottom.equalToSuperview().inset(20)
-            make.left.right.equalToSuperview().inset(30)
+            make.height.equalTo(realContainerheight-50)
+            make.bottom.equalToSuperview().inset(150)
+            make.width.equalTo(500)
         }
         
         

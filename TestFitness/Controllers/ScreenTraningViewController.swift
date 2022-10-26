@@ -111,7 +111,7 @@ class ScreenTraningViewController: UIViewController {
         
         let viewElementWidht: CGFloat = view.frame.size.width-40
         var contentSize: CGSize {
-            CGSize(width: view.frame.width-40, height: view.frame.height + 330)
+            CGSize(width: view.frame.width-40, height: 170 + 200 + 70*8 + 240 )
         }
         
         view.addSubview(scrollView)

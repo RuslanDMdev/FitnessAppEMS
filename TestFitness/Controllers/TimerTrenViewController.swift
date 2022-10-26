@@ -65,7 +65,7 @@ class TimerTrenViewController: UIViewController {
         text1Label.font = UIFont.systemFont(ofSize: 15)
         text1Label.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(labelTraning).inset(130)
+            make.top.equalTo(timerLabel).inset(-145)
         }
         
         shapeImage.image = UIImage(named: "round2")

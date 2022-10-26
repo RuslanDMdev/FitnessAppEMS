@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private let buttonSnijenieVesa = UIButton()
     private let buttonHandmode = UIButton()
     private let buttonBack = UIButton()
+    private let containerView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +37,16 @@ class ViewController: UIViewController {
         view.addSubview(buttonBack)
         view.addSubview(labelTraning)
         view.addSubview(NameImage)
-        view.addSubview(buttonKardio)
-        view.addSubview(buttonSilovay)
-        view.addSubview(buttonSnijenieVesa)
-        view.addSubview(buttonHandmode)
+        view.addSubview(containerView)
+        containerView.addSubview(buttonKardio)
+        containerView.addSubview(buttonSilovay)
+        containerView.addSubview(buttonSnijenieVesa)
+        containerView.addSubview(buttonHandmode)
+        
+//        let sizeForViews = view.frame.size.width/4-10
+        let containerHeight = view.frame.size.height/4 * 3
+        let sizeViewInContainer = containerHeight/5-10
+        let realContainerheight = containerHeight/5 * 4 + 40
         
         shapeImage.image = UIImage(named: "upIcon")
         shapeImage.snp.makeConstraints { make in
@@ -62,6 +69,7 @@ class ViewController: UIViewController {
             make.left.equalTo(20)
         }
         buttonBack.addTarget(self, action: #selector(openScreen3), for: .touchUpInside)
+    
         
         labelTraning.text = "Тренировки"
         labelTraning.font = UIFont(name: "Avenir Next Medium", size: 25)
@@ -69,6 +77,16 @@ class ViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(NameImage).inset(80)
         }
+        
+//        containerView.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        containerView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.height.equalTo(realContainerheight)
+//            make.centerY.equalToSuperview().offset(50)
+            make.bottom.equalToSuperview().inset(20)
+            make.left.right.equalToSuperview().inset(30)
+        }
+        
         
         buttonSilovay.setTitle("Силовая тренировка", for: .normal)
         buttonSilovay.setTitleColor(.black, for: .normal)
@@ -82,9 +100,11 @@ class ViewController: UIViewController {
         buttonSilovay.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         buttonSilovay.layer.cornerRadius = 15
         buttonSilovay.snp.makeConstraints { make in
-            make.top.equalTo(NameImage).inset(250)
-            make.left.right.equalToSuperview().inset(30)
-            make.height.equalTo(100)
+//            make.top.equalTo(NameImage).inset(250)
+            make.top.equalTo(0)
+            make.left.right.equalTo(0)
+//            make.left.right.equalToSuperview().inset(30)
+            make.height.equalTo(sizeViewInContainer)
         }
         buttonSilovay.addTarget(self, action: #selector(openSilovaay), for: .touchUpInside)
         
@@ -100,9 +120,10 @@ class ViewController: UIViewController {
         buttonKardio.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         buttonKardio.layer.cornerRadius = 15
         buttonKardio.snp.makeConstraints { make in
-            make.top.equalTo(buttonSilovay).inset(120)
-            make.left.right.equalToSuperview().inset(30)
-            make.height.equalTo(100)
+            make.top.equalTo(buttonSilovay.snp.bottom).offset(20)
+//            make.left.right.equalToSuperview().inset(30)
+            make.left.right.equalTo(0)
+            make.height.equalTo(sizeViewInContainer)
         }
         buttonKardio.addTarget(self, action: #selector(openKardio), for: .touchUpInside)
         
@@ -118,9 +139,10 @@ class ViewController: UIViewController {
         buttonSnijenieVesa.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         buttonSnijenieVesa.layer.cornerRadius = 15
         buttonSnijenieVesa.snp.makeConstraints { make in
-            make.top.equalTo(buttonKardio).inset(120)
-            make.left.right.equalToSuperview().inset(30)
-            make.height.equalTo(100)
+            make.top.equalTo(buttonKardio.snp.bottom).offset(20)
+//            make.left.right.equalToSuperview().inset(30)
+            make.left.right.equalTo(0)
+            make.height.equalTo(sizeViewInContainer)
         }
         buttonSnijenieVesa.addTarget(self, action: #selector(openSnijenieVesa), for: .touchUpInside)
 
@@ -136,9 +158,10 @@ class ViewController: UIViewController {
         buttonHandmode.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         buttonHandmode.layer.cornerRadius = 15
         buttonHandmode.snp.makeConstraints { make in
-            make.top.equalTo(buttonSnijenieVesa).inset(120)
-            make.left.right.equalToSuperview().inset(30)
-            make.height.equalTo(100)
+            make.top.equalTo(buttonSnijenieVesa.snp.bottom).offset(20)
+//            make.left.right.equalToSuperview().inset(30)
+            make.left.right.equalTo(0)
+            make.height.equalTo(sizeViewInContainer)
         }
         buttonHandmode.addTarget(self, action: #selector(openHandMode), for: .touchUpInside)
 

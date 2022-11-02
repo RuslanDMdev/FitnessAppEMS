@@ -79,7 +79,8 @@ class ViewController: UIViewController {
         }
         
 //        containerView.backgroundColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
-        if view.frame.size.width <= 400 {
+        
+        if view.frame.size.width <= 440 {
             containerView.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
                 make.height.equalTo(realContainerheight)
@@ -87,14 +88,14 @@ class ViewController: UIViewController {
                 make.bottom.equalToSuperview().inset(20)
                 make.left.right.equalToSuperview().inset(30)
             }
+        } else {
+            containerView.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.height.equalTo(realContainerheight-50)
+                make.bottom.equalToSuperview().inset(150)
+                make.width.equalTo(500)
+            }
         }
-        containerView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.height.equalTo(realContainerheight-50)
-            make.bottom.equalToSuperview().inset(150)
-            make.width.equalTo(500)
-        }
-        
         
         buttonSilovay.setTitle("Силовая тренировка", for: .normal)
         buttonSilovay.setTitleColor(.black, for: .normal)

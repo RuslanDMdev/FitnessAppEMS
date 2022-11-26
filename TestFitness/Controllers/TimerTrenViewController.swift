@@ -154,6 +154,7 @@ class TimerTrenViewController: UIViewController {
         
         timerAnimation()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        buttonStartTraning.isHidden = true
         
     }
     

@@ -18,6 +18,8 @@ class SnijenieVesaViewController: UIViewController {
     private let labelSubText = UILabel()
     private let buttonGetDefault = UIButton()
     private let buttonStartTraning = UIButton()
+    private let containerView = UIView()
+
 
     private let totalPulsePower = upControlView(name: "Общая Мощность Импульсов")
     private let pulseDuration = upControlView(name: "Продолжительность Импульса")
@@ -50,8 +52,11 @@ class SnijenieVesaViewController: UIViewController {
         view.addSubview(nameImage)
         view.addSubview(buttonBack)
         view.addSubview(labelTraning)
+        view.addSubview(containerView)
 
-
+        let containerHeight = view.frame.size.height/4 * 3
+        let sizeViewInContainer = containerHeight/5-10
+        let realContainerheight = containerHeight/5 * 4 + 40
         
         shapeImage.image = UIImage(named: "upIcon")
         shapeImage.snp.makeConstraints { make in
@@ -101,12 +106,12 @@ class SnijenieVesaViewController: UIViewController {
         }()
         
         
-        let viewElementWidht: CGFloat = view.frame.size.width-40
+        let viewElementWidht: CGFloat = 600-40
         var contentSize: CGSize {
-            CGSize(width: view.frame.width-40, height: 170 + 200 + 70*8 + 240 )
+            CGSize(width: 600, height: 170 + 200 + 70*8 + 240 )
         }
         
-        view.addSubview(scrollView)
+        containerView.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(labelMainText)
         contentView.addSubview(labelSubText)
@@ -116,10 +121,26 @@ class SnijenieVesaViewController: UIViewController {
         contentView.addSubview(buttonGetDefault)
         contentView.addSubview(buttonStartTraning)
         
+        if view.frame.size.width <= 440 {
+            containerView.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.height.equalTo(realContainerheight)
+                make.bottom.equalToSuperview().inset(20)
+                make.left.right.equalToSuperview().inset(30)
+            }
+        } else {
+            containerView.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.height.equalTo(realContainerheight)
+                make.bottom.equalToSuperview().inset(40)
+                make.width.equalTo(500)
+            }
+        }
+        
         scrollView.snp.makeConstraints { make in
                 make.width.equalTo(viewElementWidht)
                 make.centerX.equalToSuperview()
-                make.top.equalToSuperview().inset(170)
+                make.top.equalToSuperview().inset(0)
             make.bottom.equalToSuperview().inset(30)
         }
         

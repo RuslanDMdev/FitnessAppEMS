@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0CA60A3028FAE3AF002423AE /* newControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A2F28FAE3AF002423AE /* newControlView.swift */; };
-		0CA60A3628FB2729002423AE /* viewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3528FB2729002423AE /* viewTest.swift */; };
 		0CA60A3A29002B26002423AE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3929002B26002423AE /* AuthViewController.swift */; };
 		0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3B29015F0A002423AE /* SilovayViewController.swift */; };
 		0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */; };
@@ -54,7 +53,6 @@
 /* Begin PBXFileReference section */
 		00535239F589A54FD40C339C /* Pods-TestFitness-TestFitnessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness-TestFitnessUITests.release.xcconfig"; path = "Target Support Files/Pods-TestFitness-TestFitnessUITests/Pods-TestFitness-TestFitnessUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0CA60A2F28FAE3AF002423AE /* newControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newControlView.swift; sourceTree = "<group>"; };
-		0CA60A3528FB2729002423AE /* viewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewTest.swift; sourceTree = "<group>"; };
 		0CA60A3929002B26002423AE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0CA60A3B29015F0A002423AE /* SilovayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilovayViewController.swift; sourceTree = "<group>"; };
 		0CA60A3D29015F1F002423AE /* SnijenieVesaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnijenieVesaViewController.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 				0CA60A4529016998002423AE /* upControlView.swift */,
 				0CA60A2F28FAE3AF002423AE /* newControlView.swift */,
 				0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */,
-				0CA60A3528FB2729002423AE /* viewTest.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,7 +463,6 @@
 				0CAE601B28F9FF3300DA113E /* UIView+AutoLayout.swift in Sources */,
 				0CA60A4629016998002423AE /* upControlView.swift in Sources */,
 				0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */,
-				0CA60A3628FB2729002423AE /* viewTest.swift in Sources */,
 				0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */,
 				0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */,
 				0CA60A492905C295002423AE /* TimerTrenViewController.swift in Sources */,

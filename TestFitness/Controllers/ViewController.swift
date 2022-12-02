@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private let buttonSnijenieVesa = UIButton()
     private let buttonHandmode = UIButton()
     private let buttonBack = UIButton()
+    private let buttonSettings = UIButton()
     private let containerView = UIView()
 
     override func viewDidLoad() {
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         view.addSubview(buttonBack)
         view.addSubview(labelTraning)
         view.addSubview(NameImage)
+        view.addSubview(buttonSettings)
         view.addSubview(containerView)
         containerView.addSubview(buttonKardio)
         containerView.addSubview(buttonSilovay)
@@ -69,6 +71,13 @@ class ViewController: UIViewController {
             make.left.equalTo(20)
         }
         buttonBack.addTarget(self, action: #selector(openScreen3), for: .touchUpInside)
+        
+        buttonSettings.setImage(UIImage(systemName: "gearshape"), for: .normal)
+        buttonSettings.imageView?.snp.makeConstraints({ make in
+            make.top.equalTo(NameImage).inset(80)
+            make.right.equalTo(20)
+        })
+        buttonSettings.addTarget(self, action: #selector(), for: .touchUpInside)
     
         
         labelTraning.text = "Тренировки"
@@ -178,6 +187,12 @@ class ViewController: UIViewController {
     
     // MARK: - Open Screens
     
+    @objc func openSettingsViewController(){
+        let rootVC = infoAppController()
+        let nacVC = UINavigationController(rootViewController: rootVC)
+        nacVC.modalPresentationStyle = .fullScreen
+        present(nacVC, animated: true)
+    }
     
     @objc func openScreen3() {
         let rootVC = infoAppController()

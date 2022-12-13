@@ -74,10 +74,13 @@ class ViewController: UIViewController {
         
         buttonSettings.setImage(UIImage(systemName: "gearshape"), for: .normal)
         buttonSettings.imageView?.snp.makeConstraints({ make in
-            make.top.equalTo(NameImage).inset(80)
-            make.right.equalTo(20)
+            make.width.height.equalTo(30)
         })
-        buttonSettings.addTarget(self, action: #selector(), for: .touchUpInside)
+        buttonSettings.snp.makeConstraints { make in
+            make.top.equalTo(NameImage).inset(80)
+            make.right.equalToSuperview().inset(20)
+        }
+//        buttonSettings.addTarget(self, action: #selector(), for: .touchUpInside)
     
         
         labelTraning.text = "Тренировки"

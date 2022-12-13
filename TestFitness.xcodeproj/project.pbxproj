@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C15D0C2293A893900DCCE95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C15D0C1293A893900DCCE95 /* SettingsViewController.swift */; };
+		0C15D0C4293A8A1D00DCCE95 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C15D0C3293A8A1D00DCCE95 /* SliderView.swift */; };
+		0C15D0C6293A8A8600DCCE95 /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C15D0C5293A8A8600DCCE95 /* ViewConfig.swift */; };
+		0C15D0C8293A8AB500DCCE95 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C15D0C7293A8AB500DCCE95 /* BatteryView.swift */; };
 		0CA60A3028FAE3AF002423AE /* newControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A2F28FAE3AF002423AE /* newControlView.swift */; };
 		0CA60A3A29002B26002423AE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3929002B26002423AE /* AuthViewController.swift */; };
 		0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA60A3B29015F0A002423AE /* SilovayViewController.swift */; };
@@ -54,6 +57,9 @@
 /* Begin PBXFileReference section */
 		00535239F589A54FD40C339C /* Pods-TestFitness-TestFitnessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFitness-TestFitnessUITests.release.xcconfig"; path = "Target Support Files/Pods-TestFitness-TestFitnessUITests/Pods-TestFitness-TestFitnessUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0C15D0C1293A893900DCCE95 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0C15D0C3293A8A1D00DCCE95 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		0C15D0C5293A8A8600DCCE95 /* ViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
+		0C15D0C7293A8AB500DCCE95 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		0CA60A2F28FAE3AF002423AE /* newControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newControlView.swift; sourceTree = "<group>"; };
 		0CA60A3929002B26002423AE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0CA60A3B29015F0A002423AE /* SilovayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilovayViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +185,9 @@
 				0CA60A4529016998002423AE /* upControlView.swift */,
 				0CA60A2F28FAE3AF002423AE /* newControlView.swift */,
 				0CAE601A28F9FF3300DA113E /* UIView+AutoLayout.swift */,
+				0C15D0C7293A8AB500DCCE95 /* BatteryView.swift */,
+				0C15D0C3293A8A1D00DCCE95 /* SliderView.swift */,
+				0C15D0C5293A8A8600DCCE95 /* ViewConfig.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,11 +476,14 @@
 				0CA60A4629016998002423AE /* upControlView.swift in Sources */,
 				0CA9A96228F803B6001520F6 /* ViewController.swift in Sources */,
 				0CA60A4029015F6C002423AE /* HandModeViewController.swift in Sources */,
+				0C15D0C4293A8A1D00DCCE95 /* SliderView.swift in Sources */,
 				0CA60A3C29015F0A002423AE /* SilovayViewController.swift in Sources */,
 				0CA60A492905C295002423AE /* TimerTrenViewController.swift in Sources */,
 				0C15D0C2293A893900DCCE95 /* SettingsViewController.swift in Sources */,
 				0CAE601528F9FE4900DA113E /* Color.swift in Sources */,
 				0CA60A3A29002B26002423AE /* AuthViewController.swift in Sources */,
+				0C15D0C6293A8A8600DCCE95 /* ViewConfig.swift in Sources */,
+				0C15D0C8293A8AB500DCCE95 /* BatteryView.swift in Sources */,
 				0CA60A3E29015F1F002423AE /* SnijenieVesaViewController.swift in Sources */,
 				0CA9A95E28F803B6001520F6 /* AppDelegate.swift in Sources */,
 				0CA9A96028F803B6001520F6 /* SceneDelegate.swift in Sources */,
